@@ -1,0 +1,13 @@
+# created by virtualenv automatically
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!../*.py
+
+# Explicitly ignore configuration files or directories with sensitive info
+../config.ini
+../.env
+../secrets/
+
