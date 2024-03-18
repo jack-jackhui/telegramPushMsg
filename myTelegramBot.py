@@ -36,7 +36,7 @@ async def main():
             message += f"{crypto_id.capitalize()}: ${price}\n"
 
         await send_message_to_telegram(chat_id, message, bot_token)
-        await asyncio.sleep(3600)  # Wait for 1 hour before sending the next update
+        #await asyncio.sleep(3600)  # Wait for 1 hour before sending the next update
 
 if __name__ == '__main__':
     asyncio.run(main())
