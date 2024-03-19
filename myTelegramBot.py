@@ -1,3 +1,4 @@
+import os
 import configparser
 import time
 import asyncio
@@ -63,7 +64,7 @@ async def send_message_to_telegram(chat_id, message, bot_token):
 
 async def main():
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read(os.path.join(os.path.dirname(__file__), 'config.ini'))
     bot_token = config['TELEGRAM']['BOT_TOKEN']
     chat_id = config['TELEGRAM']['CHAT_ID']
     api_key = config['COINGECKO']['API_KEY']
